@@ -1,5 +1,11 @@
 @import '../../bower_components/foundation-sites/scss/foundation';
 
+$primary: #2199e8;
+$secondary: #777;
+$success: #3adb76;
+$warning: #ffae00;
+$alert: #ec5840;
+
 /* Basics */
 @include foundation-global-styles;
 @include foundation-typography;
@@ -14,11 +20,11 @@
           // @include foundation-flex-classes;
 
 /* Menus */
-     // @include foundation-top-bar;
-     // @include foundation-title-bar;
+     @include foundation-top-bar;
+     @include foundation-title-bar;
      // @include foundation-accordion;
      // @include foundation-accordion-menu;
-     // @include foundation-menu;
+     @include foundation-menu;
      // @include foundation-menu-icon;
      // @include foundation-drilldown-menu;
      // @include foundation-dropdown;

@@ -55,3 +55,60 @@ add_theme_support( 'custom-header', array(
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
+
+
+
+//* Filter The Menu
+function be_primary_menu_args( $args ) {
+  if( 'primary' == $args['theme_location'] ) {
+    // $args['depth'] = 1;
+  }
+
+  return $args;
+}
+add_filter( 'wp_nav_menu_args', 'be_primary_menu_args' );
+
+
+//* Reposition the primary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header_right', 'genesis_do_nav' );
+
+
+
+//* Remove the site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+
+
+add_filter( 'genesis_attr_site-header', 'sby_header_add_css' );
+function sby_header_add_css( $attributes ) {
+
+ // add original plus extra CSS classes
+ $attributes['class'] .= ' top-bar';
+
+ // return the attributes
+ return $attributes;
+
+}
+
+add_filter( 'genesis_attr_site-title', 'sby_title_add_css' );
+function sby_title_add_css( $attributes ) {
+
+ // add original plus extra CSS classes
+ $attributes['class'] .= ' top-bar-left';
+
+ // return the attributes
+ return $attributes;
+
+}
+
+add_filter( 'genesis_attr_header-widget-area', 'sby_header_widget_area' );
+function sby_header_widget_area( $attributes ) {
+
+ // add original plus extra CSS classes
+ $attributes['class'] .= ' top-bar-right';
+
+ // return the attributes
+ return $attributes;
+
+}

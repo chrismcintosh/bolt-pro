@@ -5,7 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 
 //Sass Variables
-var sassInput = './assets/scss/*.scss';
+var sassInput = './assets/scss/**/*.scss';
 var sassOutput = './';
 
 //Sass Options
