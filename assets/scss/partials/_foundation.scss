@@ -11,25 +11,25 @@ $alert: #ec5840;
 @include foundation-typography;
 
 /* Grid and Layout */
-// @include foundation-visibility-classes;
+@include foundation-visibility-classes;
      /* Flex */
-          // @include foundation-grid;
-          // @include foundation-float-classes;
+          @include foundation-grid;
+          @include foundation-float-classes;
      /* Float */
           // @include foundation-flex-grid;
           // @include foundation-flex-classes;
 
 /* Menus */
+     @include foundation-menu;
      @include foundation-top-bar;
      @include foundation-title-bar;
      // @include foundation-accordion;
      // @include foundation-accordion-menu;
-     @include foundation-menu;
      // @include foundation-menu-icon;
      // @include foundation-drilldown-menu;
-     // @include foundation-dropdown;
-     // @include foundation-dropdown-menu;
-     // @include foundation-off-canvas;
+     @include foundation-dropdown;
+     @include foundation-dropdown-menu;
+     @include foundation-off-canvas;
 
 /* Defaults */
      // @include foundation-media-object;

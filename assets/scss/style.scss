@@ -17,6 +17,26 @@
 /* Import Foundation */
 @import 'partials/foundation';
 
-// .site-title a {
-//      @extend .menu-text;
-// }
+/***************************************
+*     Top Bar Menu Customizations      *
+***************************************/
+
+     .site-header {
+          @extend .top-bar;
+     }
+
+     .title-area {
+          @extend .top-bar-left;
+     }
+
+     .site-title a {
+          @extend .menu-text;
+     }
+
+     .header-widget-area {
+          @extend .top-bar-right;
+     }
+
+     .nav-primary .is-dropdown-submenu-parent .sub-menu {
+          @extend .menu;
+     }

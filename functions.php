@@ -25,12 +25,8 @@ function genesis_sample_enqueue_scripts_styles() {
 	wp_enqueue_style( 'genesis-sample-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 
-	wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
-	$output = array(
-		'mainMenu' => __( 'Menu', 'genesis-sample' ),
-		'subMenu'  => __( 'Menu', 'genesis-sample' ),
-	);
-	wp_localize_script( 'genesis-sample-responsive-menu', 'genesisSampleL10n', $output );
+	wp_enqueue_script( 'foundation-scripts', 'https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'foundation-init', get_stylesheet_directory_uri() . '/assets/js/foundation-init.js', array( 'jquery' ), true );
 
 }
 
@@ -57,11 +53,19 @@ add_theme_support( 'custom-header', array(
 add_theme_support( 'genesis-footer-widgets', 3 );
 
 
+//* Add support for structural wraps
+add_theme_support( 'genesis-structural-wraps', array(
+	'site-inner',
+	'footer-widgets',
+	'footer'
+) );
+
 
 //* Filter The Menu
 function be_primary_menu_args( $args ) {
   if( 'primary' == $args['theme_location'] ) {
     // $args['depth'] = 1;
+    $args['items_wrap'] = '<ul id=%1$s class="%2$s menu dropdown" data-dropdown-menu>%3$s</ul>';
   }
 
   return $args;
@@ -80,35 +84,43 @@ remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 
 
 
-add_filter( 'genesis_attr_site-header', 'sby_header_add_css' );
-function sby_header_add_css( $attributes ) {
-
- // add original plus extra CSS classes
- $attributes['class'] .= ' top-bar';
-
- // return the attributes
- return $attributes;
-
+add_action('genesis_before', 'sby_off_canvas_open');
+add_action('genesis_after', 'sby_off_canvas_close');
+function sby_off_canvas_open() {
+	echo '<div class="off-canvas-wrapper">';
+	echo '<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>';
+}
+function sby_off_canvas_close() {
+	echo '</div>';
+	echo '</div>';
 }
 
-add_filter( 'genesis_attr_site-title', 'sby_title_add_css' );
-function sby_title_add_css( $attributes ) {
 
- // add original plus extra CSS classes
- $attributes['class'] .= ' top-bar-left';
+add_action('genesis_after_header', 'sby_off_test');
+function sby_off_test() {
+	?>
+	<button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
+	<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 
- // return the attributes
- return $attributes;
+	        <!-- Close button -->
+	        <button class="close-button" aria-label="Close menu" type="button" data-close>
+	          <span aria-hidden="true">&times;</span>
+	        </button>
 
-}
+	        <!-- Menu -->
+	        <ul class="vertical menu">
+	          <li><a href="#">Foundation</a></li>
+	          <li><a href="#">Dot</a></li>
+	          <li><a href="#">ZURB</a></li>
+	          <li><a href="#">Com</a></li>
+	          <li><a href="#">Slash</a></li>
+	          <li><a href="#">Sites</a></li>
+	        </ul>
 
-add_filter( 'genesis_attr_header-widget-area', 'sby_header_widget_area' );
-function sby_header_widget_area( $attributes ) {
+	      </div>
 
- // add original plus extra CSS classes
- $attributes['class'] .= ' top-bar-right';
-
- // return the attributes
- return $attributes;
-
+	      <div class="off-canvas-content" data-off-canvas-content>
+	        <!-- Page content -->
+	      </div>
+	<?php
 }
