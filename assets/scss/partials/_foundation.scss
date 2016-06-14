@@ -1,4 +1,5 @@
 @import '../../bower_components/foundation-sites/scss/foundation';
+@import '../../bower_components/motion-ui/src/motion-ui';
 
 $primary: #2199e8;
 $secondary: #777;
@@ -23,10 +24,10 @@ $alert: #ec5840;
      @include foundation-menu;
      @include foundation-top-bar;
      @include foundation-title-bar;
-     // @include foundation-accordion;
-     // @include foundation-accordion-menu;
-     // @include foundation-menu-icon;
-     // @include foundation-drilldown-menu;
+     @include foundation-accordion;
+     @include foundation-accordion-menu;
+     @include foundation-menu-icon;
+     @include foundation-drilldown-menu;
      @include foundation-dropdown;
      @include foundation-dropdown-menu;
      @include foundation-off-canvas;
@@ -40,9 +41,9 @@ $alert: #ec5840;
 
 /* Inputs */
      // @include foundation-forms;
-     // @include foundation-button;
+     @include foundation-button;
      // @include foundation-button-group;
-     // @include foundation-close-button;
+     @include foundation-close-button;
 
 /* Extras */
      // @include foundation-badge;
@@ -59,3 +60,5 @@ $alert: #ec5840;
      // @include foundation-slider;
      // @include foundation-pagination;
      // @include foundation-progress-bar;
+
+@include motion-ui-transitions;
