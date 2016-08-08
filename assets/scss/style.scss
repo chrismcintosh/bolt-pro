@@ -17,20 +17,6 @@
 /* Import Foundation */
 @import 'partials/foundation';
 
-/***************************************
-*     Top Bar Menu Customizations      *
-***************************************/
-     .nav-primary .is-dropdown-submenu-parent .sub-menu {
-          @extend .menu;
-     }
-
-     .is-drilldown-submenu {
-          margin-left: 0;
-          padding-left: 1.25rem;
-     }
-
-
-
 p.site-title {
      line-height: 0;
      margin: 0;
@@ -38,23 +24,28 @@ p.site-title {
 
 
 .content-sidebar-wrap {
-     @include grid-row;
+     @include grid-row(null, null, 80rem, true, $grid-column-gutter);
+     padding: 40px 2%;
 }
 
 .content {
      @include grid-column(12);
      @include breakpoint(medium) {
-          @include grid-column(9);
+          @include grid-column(8);
      }
 }
 
 .sidebar {
      @include grid-column(12);
      @include breakpoint(medium) {
-          @include grid-column(3);
+          @include grid-column(4);
      }
 }
 
 .trans-button {
      float: right;
+}
+
+.site-footer {
+     text-align: center;
 }

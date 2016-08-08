@@ -53,5 +53,5 @@ function foundation_custom_header() {
      add_filter( 'genesis_seo_title', 'child_header_title', 10, 3 );
      function child_header_title( $title, $inside, $wrap ) {
          $inside = sprintf( '%s', esc_attr( get_bloginfo( 'name' ) ), get_bloginfo( 'name' ) );
-         return sprintf( '%2$s', $wrap, $inside );
+         return sprintf( '<span itemprop="headline">%2$s</span>', $wrap, $inside );
      }
