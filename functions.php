@@ -19,13 +19,15 @@ define( 'CHILD_THEME_URL', 'http://www.sbydigital.com/' );
 define( 'CHILD_THEME_VERSION', '0.0.1' );
 
 include get_stylesheet_directory() . '/lib/enqueue-scripts.php';
+include get_stylesheet_directory() . '/lib/components/index.php';
+
+
 // include get_stylesheet_directory() . '/lib/header-navigation.php';
-// include get_stylesheet_directory() . '/lib/off-canvas-wrapper.php';
+
 include get_stylesheet_directory() . '/lib/theme-support.php';
 // include get_stylesheet_directory() . '/lib/inline-title-logo.php';
 
-include get_stylesheet_directory() . '/lib/foundation/foundation-functions.php';
-include get_stylesheet_directory() . '/lib/foundation/foundation-walker.php';
+
 
 //* Project Specific Includes
 	// include get_stylesheet_directory() . '/lib/off-canvas-example.php';
@@ -40,6 +42,7 @@ add_theme_support( 'genesis-structural-wraps', array(
 
 //* Remove the site title
 remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
+//* Add site title to foundation header and nav
 add_action('foundation_site_title', 'genesis_seo_site_title' );
 //* Remove the site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );

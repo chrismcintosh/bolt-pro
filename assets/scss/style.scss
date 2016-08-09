@@ -15,7 +15,8 @@
 */
 
 /* Import Foundation */
-@import 'partials/foundation';
+@import 'vendor/foundation-settings';
+@import 'vendor/foundation';
 
 p.site-title {
      line-height: 0;
