@@ -89,7 +89,7 @@ laptop:1024px,
 xlarge: 1200px,
 xxlarge: 1440px,
 );
-$breakpoint-classes: (small phone phablet medium tablet large laptop xlarge xxlarge);
+$breakpoint-classes: (phone phablet tablet laptop xlarge xxlarge);
 
 // 3. The Grid
 // -----------

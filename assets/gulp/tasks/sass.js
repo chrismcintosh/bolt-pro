@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     config = require('../config'), // Relative to this file
+    autoprefixer = require('autoprefixer'),
     $ = require('gulp-load-plugins')(),
+    mqpacker = require('css-mqpacker'),
     beep = require('beepbeep');
 
 
@@ -8,12 +10,8 @@ var gulp = require('gulp'),
       errLogToConsole: true,
       outputStyle: 'expanded'
     };
-    var sassProduction = {
-         errLogToConsole: true,
-         outputStyle: 'compressed'
-    };
 
-    gulp.task('sass', function () {
+    gulp.task('sass', ['clean-styles'] , function () {
       return gulp
         .src(config.paths.sass.src)
         .pipe($.plumber({
@@ -25,10 +23,15 @@ var gulp = require('gulp'),
         }))
         .pipe($.sourcemaps.init())
         .pipe($.sass(sassOptions))
-        .pipe($.autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
+        // Parse with PostCSS plugins.
+        .pipe($.postcss([
+               autoprefixer({
+                    browsers: ['last 2 version']
+               }),
+               mqpacker({
+                    sort:true
+               }),
+        ]))
         .pipe($.sourcemaps.write())
         .pipe(gulp.dest(config.paths.project));
     });
