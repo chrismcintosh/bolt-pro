@@ -31,18 +31,25 @@ function ssm_do_primary_navigation() { ?>
 
 
      <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-       <button class="menu-icon float-right" type="button" data-toggle></button>
-       <div class="title-bar-title"><?php do_action('foundation_site_title'); ?></div>
+          <div class="title-bar-left">
+               <div class="title-bar-title"><?php do_action('foundation_site_title'); ?></div>
+          </div>
+
+          <div class="title-bar-right">
+               <button class="" type="button" data-toggle>Menu</button>
+          </div>
+
+
      </div>
 
      <div class="top-bar" id="example-menu">
        <div class="top-bar-left hide-for-small-only">
-         <ul class="dropdown menu" data-dropdown-menu>
+         <ul class="dropdown menu">
            <li class="menu-text"><?php do_action('foundation_site_title'); ?></li>
          </ul>
        </div>
        <div class="top-bar-right">
-            <ul class="menu">
+            <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
                 <?php
                 wp_nav_menu(array(
                      'container'	=> false,
