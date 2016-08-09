@@ -1,0 +1,54 @@
+/*
+Accessibility Extras - Taken from the Leiden theme & Genesis Accessible plugin (genesis-accessible.org)
+---------------------------------------------------------------------------------------------------- */
+
+/*
+* Skiplinks
+* Hide visually but not from screen readers
+* and keyboard users
+--------------------------------------------- */
+
+.more-link {
+	position: relative;
+}
+
+.screen-reader-text,
+.screen-reader-text span,
+.search-form label {
+	clip: rect(0, 0, 0, 0);
+	height: 0;
+	position: absolute;
+	width: 0;
+}
+
+.screen-reader-shortcut {
+	clip: rect(0, 0, 0, 0);
+	left: 10px;
+	position: absolute;
+	top: 10px;
+}
+
+.screen-reader-shortcut:focus {
+	background: $white;
+	clip: auto;
+	display: block;
+	height: auto;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	width: auto;
+	z-index: 100000;
+}
+
+.wpacc-genesis-skip-link li,
+.genwpacc-genesis-skip-link li {
+	height: 0;
+	width: 0;
+	list-style: none;
+}
+
+/* Display outline on focus */
+:focus {
+	color: lighten($black, 11);
+	outline: lighten($black, 63) dotted thin;
+}

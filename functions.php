@@ -25,7 +25,7 @@ include get_stylesheet_directory() . '/lib/components/index.php';
 // include get_stylesheet_directory() . '/lib/header-navigation.php';
 
 include get_stylesheet_directory() . '/lib/theme-support.php';
-// include get_stylesheet_directory() . '/lib/inline-title-logo.php';
+include get_stylesheet_directory() . '/lib/inline-title-logo.php';
 
 
 

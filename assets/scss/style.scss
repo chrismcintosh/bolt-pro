@@ -18,30 +18,9 @@
 @import 'vendor/foundation-settings';
 @import 'vendor/foundation';
 
-p.site-title {
-     line-height: 0;
-     margin: 0;
-}
-
-
-.content-sidebar-wrap {
-     @include grid-row(null, null, 80rem, true, $grid-column-gutter);
-     padding: 40px 2%;
-}
-
-.content {
-     @include grid-column(12);
-     @include breakpoint(medium) {
-          @include grid-column(8);
-     }
-}
-
-.sidebar {
-     @include grid-column(12);
-     @include breakpoint(medium) {
-          @include grid-column(4);
-     }
-}
+@import 'base/accessibility';
+@import 'base/layout';
+@import 'base/header';
 
 .trans-button {
      float: right;

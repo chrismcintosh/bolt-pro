@@ -1,0 +1,50 @@
+.site-title img {
+     max-height: 120px;
+     text-align: center;
+     width: auto;
+
+     @include breakpoint(medium) {
+          max-height: 80px;
+     }
+}
+
+.mobile-header {
+
+     .title-area {
+          .site-title {
+               text-align: center;
+          }
+     }
+
+     .menu-toggle {
+          background-color: #777;
+          text-align: center;
+          width: 100%;
+
+          button {
+               height: 100%;
+               padding: 20px;
+               width: 100%;
+          }
+     }
+
+}
+
+
+/* Top Bar is Desktop Menu View */
+@include breakpoint(medium) {
+     .top-bar {
+          @include flex-grid-row($width: 100%);
+          @include flex-align($y:middle);
+
+          .top-bar-left {
+               @include flex-grid-column(2)
+          }
+          .top-bar-right {
+               @include flex-grid-column(10);
+               ul.menu {
+                    float: right;
+               }
+          }
+     }
+}
