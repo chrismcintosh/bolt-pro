@@ -8,7 +8,7 @@ module.exports = {
       ],
       build: [
            './style.css',
-           './style.css.min'
+           './style.min.css'
       ]
     },
     js: {
