@@ -7,9 +7,6 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var beep = require('beepbeep');
 
-
-
-
 //****************************
 //        Default Task
 //****************************

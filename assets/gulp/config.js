@@ -4,9 +4,7 @@ module.exports = {
     sass: {
       src: [
            './assets/scss/*.scss',
-           './assets/scss/**/*.scss',
-           './bower_components/foundation-sites/assets/scss/*.scss',
-           './assets/bower_components/foundation-sites/scss/**/*.scss'
+           './assets/scss/**/*.scss'
       ],
       build: [
            './style.css',
