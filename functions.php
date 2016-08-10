@@ -38,3 +38,6 @@ add_theme_support( 'genesis-structural-wraps', array(
 	'footer-widgets',
 	'footer'
 ) );
+
+remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
+add_action('genesis_after_content_sidebar_wrap', 'genesis_posts_nav');

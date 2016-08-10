@@ -47,14 +47,16 @@ p.site-title {
 /* Top Bar is Desktop Menu View */
 @include breakpoint(tablet) {
      .top-bar {
-          @include flex-grid-row($width: 100%);
+          @include flex-grid-row($width: 100%, $gutter: 0);
           @include flex-align($y:middle);
+          justify-content: space-between;
 
           .top-bar-left {
-               @include flex-grid-column(2)
+               @include flex-grid-column(2, 0)
           }
           .top-bar-right {
-               @include flex-grid-column(10);
+               @include flex-grid-column(9, 0);
+               float: right;
                ul.menu {
                     float: right;
                }

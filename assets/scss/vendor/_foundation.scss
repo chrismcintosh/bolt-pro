@@ -58,7 +58,7 @@ $alert: #ec5840;
      // @include foundation-table;
      // @include foundation-tabs;
      // @include foundation-slider;
-     // @include foundation-pagination;
+     @include foundation-pagination;
      // @include foundation-progress-bar;
 
 @include motion-ui-transitions;

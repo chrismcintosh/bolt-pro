@@ -1,0 +1,103 @@
+/* Media Gallery
+--------------------------------------------- */
+
+.gallery {
+	@include grid-row();
+}
+
+.gallery-item {
+	display: inline-block;
+	line-height: 0;
+	list-style: none;
+	margin: 0 0 2.35765%;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+
+	@include breakpoint(tablet) {
+
+		.gallery-columns-0 &,
+		.gallery-columns-1 &,
+		.gallery-col-0 &,
+		.gallery-col-1 & {
+			@include grid-column(12);
+		}
+
+		.gallery-columns-2 &,
+		.gallery-col-2 & {
+			@include grid-column(6);
+               @include grid-column-end;
+		}
+
+		.gallery-columns-3 &,
+		.gallery-col-3 & {
+			@include grid-column(4);
+               @include grid-column-end;
+		}
+
+		.gallery-columns-4 &,
+		.gallery-col-4 & {
+			@include grid-column(3);
+               @include grid-column-end;
+		}
+
+		.gallery-columns-5 &,
+		.gallery-col-5 & {
+			@include grid-column(2.4);
+               @include grid-column-end;
+		}
+
+		.gallery-columns-6 &,
+		.gallery-col-6 & {
+			@include grid-column(2);
+               @include grid-column-end;
+		}
+
+		.gallery-columns-7 &,
+		.gallery-col-7 & {
+			@include grid-column(1.71);
+               @include grid-column-end;
+		}
+
+		.gallery-columns-8 &,
+		.gallery-col-8 & {
+			@include grid-column(1.5);
+               @include grid-column-end;
+		}
+
+		.gallery-columns-9 &,
+		.gallery-col-9 & {
+			@include grid-column(1.33);
+               @include grid-column-end;
+		}
+	}
+
+	.gallery-caption {
+		@include transition(all, 0.2s ease-in-out);
+		background: transparentize($black, 0.5);
+		color: $white;
+		line-height: 1.65;
+		max-height: 50%;
+		opacity: 0;
+		overflow: hidden;
+		padding: 10px;
+		position: absolute;
+		visibility: hidden;
+		width: 100%;
+	}
+
+	&:hover .gallery-caption {
+		@include transform(translate(0, -100%));
+		visibility: visible;
+		opacity: 1;
+	}
+
+}
+
+.gallery img {
+	width: 100%;
+	margin: 0 auto;
+}
