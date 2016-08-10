@@ -18,18 +18,8 @@
 @import 'vendor/foundation-settings';
 @import 'vendor/foundation';
 
+/* Import Base */
 @import 'base/accessibility';
 @import 'base/layout';
 @import 'base/header';
-
-.trans-button {
-     float: right;
-}
-
-.site-footer {
-     text-align: center;
-}
-
-.prefix-test {
-     display:flex;
-}
+@import 'base/footer';

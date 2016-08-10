@@ -17,8 +17,8 @@ $alert: #ec5840;
           @include foundation-grid;
           @include foundation-float-classes;
      /* Float */
-          // @include foundation-flex-grid;
-          // @include foundation-flex-classes;
+          @include foundation-flex-grid;
+          @include foundation-flex-classes;
 
 /* Menus */
      @include foundation-menu;
@@ -33,32 +33,32 @@ $alert: #ec5840;
      @include foundation-off-canvas;
 
 /* Defaults */
-     // @include foundation-media-object;
-     // @include foundation-thumbnail;
-     // @include foundation-flex-video;
-     // @include foundation-label;
-     // @include foundation-breadcrumbs;
+     @include foundation-media-object;
+     @include foundation-thumbnail;
+     @include foundation-flex-video;
+     @include foundation-label;
+     @include foundation-breadcrumbs;
 
 /* Inputs */
-     // @include foundation-forms;
+     @include foundation-forms;
      @include foundation-button;
-     // @include foundation-button-group;
+     @include foundation-button-group;
      @include foundation-close-button;
 
 /* Extras */
-     // @include foundation-badge;
-     // @include foundation-callout;
-     // @include foundation-orbit;
-     // @include foundation-sticky;
-     // @include foundation-reveal;
-     // @include foundation-tooltip;
+     @include foundation-badge;
+     @include foundation-callout;
+     @include foundation-orbit;
+     @include foundation-sticky;
+     @include foundation-reveal;
+     @include foundation-tooltip;
 
 /* Data Presentation */
-     // @include foundation-switch;
-     // @include foundation-table;
-     // @include foundation-tabs;
-     // @include foundation-slider;
-     // @include foundation-pagination;
-     // @include foundation-progress-bar;
+     @include foundation-switch;
+     @include foundation-table;
+     @include foundation-tabs;
+     @include foundation-slider;
+     @include foundation-pagination;
+     @include foundation-progress-bar;
 
 @include motion-ui-transitions;

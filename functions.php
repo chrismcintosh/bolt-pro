@@ -38,11 +38,3 @@ add_theme_support( 'genesis-structural-wraps', array(
 	'footer-widgets',
 	'footer'
 ) );
-
-
-//* Remove the site title
-remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
-//* Add site title to foundation header and nav
-add_action('foundation_site_title', 'genesis_seo_site_title' );
-//* Remove the site description
-remove_action( 'genesis_site_description', 'genesis_seo_site_description' );

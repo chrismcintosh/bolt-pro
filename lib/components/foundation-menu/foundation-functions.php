@@ -1,22 +1,14 @@
 <?php
-add_action('genesis_before', 'ssm_open_offnav_markup', 10);
-/**
- * Add Foundation offcanvas opening markup
- */
-function ssm_open_offnav_markup() {
-  $offnavopen = '<div class="off-canvas-wrapper">';
-  $offnavopen .= '<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>';
-  echo $offnavopen;
-}
-add_action('genesis_after', 'ssm_close_offnav_markup', 5);
-/**
- * Add Foundation offcanvas closing markup
- */
-function ssm_close_offnav_markup() {
-  $offnavclose = '</div><!-- end .off-canvas-wrapper-inner -->';
-  $offnavclose .= '</div><!-- end off-canvas-wrapper -->';
-  echo $offnavclose;
-}
+
+
+//* Remove the site title
+remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
+//* Add site title to foundation header and nav
+add_action('foundation_site_title', 'genesis_seo_site_title' );
+//* Remove the site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+
 /**
  * Rebuild Navigation Menus
  */
@@ -28,24 +20,15 @@ ADD FOUNDATION FEATURES TO WORDPRESS
 add_action('genesis_after_header', 'ssm_do_primary_navigation');
 function ssm_do_primary_navigation() { ?>
 
+     <div class="top-bar" >
 
-
-     <div class="mobile-header" data-responsive-toggle="example-menu" data-hide-for="medium">
-          <div class="title-area">
-               <?php do_action('foundation_site_title'); ?>
-          </div>
-          <div class="menu-toggle">
-               <button class="" type="button" data-toggle>Menu</button>
-          </div>
-     </div>
-
-     <div class="top-bar" id="example-menu">
-       <div class="top-bar-left hide-for-small-only">
-         <ul class="dropdown menu">
+       <div class="top-bar-left">
            <li class="menu-text"><?php do_action('foundation_site_title'); ?></li>
-         </ul>
        </div>
-       <div class="top-bar-right">
+       <div class="menu-toggle" data-responsive-toggle="example-menu">
+            <button class="" type="button" data-toggle>Menu</button>
+       </div>
+       <div class="top-bar-right" id="example-menu">
             <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
                 <?php
                 wp_nav_menu(array(
@@ -64,11 +47,6 @@ function ssm_do_primary_navigation() { ?>
            </ul>
        </div>
      </div>
-
-
-
-
-
 
 
 <?php }

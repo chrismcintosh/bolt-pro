@@ -8,28 +8,41 @@
      }
 }
 
-.mobile-header {
+.menu-toggle {
+     background-color: #777;
+     text-align: center;
+     width: 100%;
 
-     .title-area {
-          .site-title {
-               text-align: center;
-          }
-     }
-
-     .menu-toggle {
-          background-color: #777;
-          text-align: center;
+     button {
+          height: 100%;
+          padding: 20px;
           width: 100%;
-
-          button {
-               height: 100%;
-               padding: 20px;
-               width: 100%;
-          }
      }
-
 }
 
+.menu-text {
+     list-style-type: none;
+}
+
+p.site-title {
+     margin-bottom: 0;
+}
+
+@include breakpoint (phablet down) {
+
+     .site-title {text-align: center;}
+     .top-bar {
+          @include flex-grid-row($width: 100%);
+          .top-bar-left,
+          .top-bar-right {
+               @include flex-grid-column(12);
+
+               ul.menu {
+                    padding: 10px 0;
+               }
+          }
+     }
+}
 
 /* Top Bar is Desktop Menu View */
 @include breakpoint(medium) {
@@ -46,5 +59,6 @@
                     float: right;
                }
           }
+
      }
 }
