@@ -3,7 +3,7 @@
      text-align: center;
      width: auto;
 
-     @include breakpoint(medium) {
+     @include breakpoint(tablet) {
           max-height: 80px;
      }
 }
@@ -28,11 +28,12 @@ p.site-title {
      margin-bottom: 0;
 }
 
-@include breakpoint (phablet down) {
+
 
      .site-title {text-align: center;}
      .top-bar {
           @include flex-grid-row($width: 100%);
+          padding: 0;
           .top-bar-left,
           .top-bar-right {
                @include flex-grid-column(12);
@@ -42,10 +43,9 @@ p.site-title {
                }
           }
      }
-}
 
 /* Top Bar is Desktop Menu View */
-@include breakpoint(medium) {
+@include breakpoint(tablet) {
      .top-bar {
           @include flex-grid-row($width: 100%);
           @include flex-align($y:middle);

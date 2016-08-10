@@ -29,7 +29,7 @@ function ssm_do_primary_navigation() { ?>
             <button class="" type="button" data-toggle>Menu</button>
        </div>
        <div class="top-bar-right" id="example-menu">
-            <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+            <ul class="menu" data-responsive-menu="drilldown tablet-dropdown">
                 <?php
                 wp_nav_menu(array(
                      'container'	=> false,

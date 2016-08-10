@@ -89,7 +89,7 @@ laptop:1024px,
 xlarge: 1200px,
 xxlarge: 1440px,
 );
-$breakpoint-classes: (phone phablet tablet laptop xlarge xxlarge);
+$breakpoint-classes: (phone tablet laptop);
 
 // 3. The Grid
 // -----------
@@ -97,8 +97,8 @@ $breakpoint-classes: (phone phablet tablet laptop xlarge xxlarge);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+  phone: 20px,
+  tablet: 30px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
