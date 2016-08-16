@@ -18,7 +18,7 @@ function foundation_custom_header() {
 
 <div class="top-bar" id="primary-navigation">
   <div class="top-bar-left">
-    <ul class="menu" >
+    <ul class="menu" data-toggler data-animate="slide-in-down slide-out-up">
       <li class="menu-text"><?php do_action( 'custom_site_title_hook' ); ?></li>
     </ul>
   </div>

@@ -44,8 +44,10 @@ p.site-title {
           }
      }
 
+
+
 /* Top Bar is Desktop Menu View */
-@include breakpoint(tablet) {
+@include breakpoint(tablet up) {
      .top-bar {
           @include flex-grid-row($width: 100%, $gutter: 0);
           @include flex-align($y:middle);

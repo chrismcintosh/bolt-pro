@@ -29,7 +29,6 @@ function ssm_do_primary_navigation() { ?>
             <button class="" type="button" data-toggle>Menu</button>
        </div>
        <div class="top-bar-right" id="example-menu">
-            <ul class="menu" data-responsive-menu="drilldown tablet-dropdown">
                 <?php
                 wp_nav_menu(array(
                      'container'	=> false,
@@ -40,11 +39,10 @@ function ssm_do_primary_navigation() { ?>
                      'after' => '',
                      'link_before' => '',
                      'link_after' => '',
-                     'items_wrap' => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+                     'items_wrap' => '<ul id="%1$s" class="%2$s menu" data-responsive-menu="phone-drilldown tablet-dropdown">%3$s</ul>',
                      'walker'  => new Foundation_Walker()
                 ));
                 ?>
-           </ul>
        </div>
      </div>
 

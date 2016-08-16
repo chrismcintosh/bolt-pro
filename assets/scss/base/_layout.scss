@@ -1,6 +1,6 @@
 .content-sidebar-wrap {
      @include grid-row(null, null, 80rem, true, $grid-column-gutter);
-     padding: 40px 2%;
+     padding: 80px 2%;
 }
 
 .content {

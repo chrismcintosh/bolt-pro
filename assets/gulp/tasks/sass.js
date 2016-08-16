@@ -8,7 +8,8 @@ var gulp = require('gulp'),
 
     var sassOptions = {
       errLogToConsole: true,
-      outputStyle: 'expanded'
+      outputStyle: 'expanded',
+      includePaths: ['node_modules/motion-ui/src']
     };
 
     gulp.task('sass', ['clean-styles'] , function () {
