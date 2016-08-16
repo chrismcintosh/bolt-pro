@@ -39,7 +39,7 @@ function ssm_do_primary_navigation() { ?>
                      'after' => '',
                      'link_before' => '',
                      'link_after' => '',
-                     'items_wrap' => '<ul id="%1$s" class="%2$s menu" data-responsive-menu="phone-drilldown tablet-dropdown">%3$s</ul>',
+                     'items_wrap' => '<ul id="%1$s" class="%2$s menu" data-responsive-menu="drilldown medium-dropdown">%3$s</ul>',
                      'walker'  => new Foundation_Walker()
                 ));
                 ?>
