@@ -25,6 +25,8 @@ var gulp = require('gulp'),
         // Parse with PostCSS plugins.
         .pipe($.uncss({
              html: [
+                  // Add pages that are important here after running
+                  // production make sure to check pages manually for proper display
                   'http://foundation.dev',
                   'http://foundation.dev/sample-page'
              ],
