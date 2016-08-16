@@ -4,8 +4,6 @@ var gulp = require('gulp'),
     beep = require('beepbeep');
 
 
-
-
 gulp.task('clean-styles', function () {
     return gulp.src(config.paths.sass.build, {read: false})
         .pipe($.clean());

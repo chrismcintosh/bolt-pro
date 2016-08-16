@@ -11,7 +11,7 @@ var gulp = require('gulp'),
       outputStyle: 'compressed'
     };
 
-    gulp.task('production', ['clean-styles', 'cssnano'] , function () {
+    gulp.task('production', ['clean-styles'] , function () {
       return gulp
         .src(config.paths.sass.src)
         .pipe($.plumber({
@@ -23,6 +23,17 @@ var gulp = require('gulp'),
         }))
         .pipe($.sass(sassOptions))
         // Parse with PostCSS plugins.
+        .pipe($.uncss({
+             html: [
+                  'http://foundation.dev',
+                  'http://foundation.dev/sample-page'
+             ],
+             ignore: [
+                  new RegExp('^meta\..*'),
+                  new RegExp('.is-.*'),
+                  new RegExp('.menu')
+             ]
+          }))
         .pipe($.postcss([
                autoprefixer({
                     browsers: ['last 2 version']
@@ -31,5 +42,8 @@ var gulp = require('gulp'),
                     sort:true
                }),
         ]))
+        .pipe($.cssnano({
+             safe: true // Use safe optimizations
+        }))
         .pipe(gulp.dest(config.paths.project));
     });

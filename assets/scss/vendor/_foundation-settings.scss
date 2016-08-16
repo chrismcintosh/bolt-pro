@@ -383,8 +383,8 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: map-get($foundation-palette, primary);
+$menu-item-color-active: map-get($foundation-palette, primary);
+$menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 
 // 23. Meter

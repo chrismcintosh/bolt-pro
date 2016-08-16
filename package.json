@@ -25,6 +25,7 @@
     "gulp-sass-lint": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-uncss": "^1.0.6",
     "motion-ui": "^1.2.2",
     "require-dir": "^0.3.0"
   }
