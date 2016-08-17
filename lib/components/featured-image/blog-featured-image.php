@@ -11,7 +11,7 @@ function utility_pro_featured_image() {
 	 */
 
 	$image = '<div class="featured-image">';
-	$image .= get_the_post_thumbnail( get_the_ID(), 'feature-large' );
+	$image .= get_the_post_thumbnail( get_the_ID(), 'full' );
 	$image .= '</div>';
 
 	echo $image;
