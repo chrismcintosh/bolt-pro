@@ -1,23 +1,11 @@
 .site-title img {
-     max-height: 120px;
+     max-height: 80px;
      text-align: center;
      width: auto;
 
-     @include breakpoint(tablet) {
-          max-height: 80px;
-     }
-}
-
-.menu-toggle {
-     background-color: #777;
-     text-align: center;
-     width: 100%;
-
-     button {
-          height: 100%;
-          padding: 20px;
-          width: 100%;
-     }
+     // @include breakpoint(tablet) {
+     //      max-height: 80px;
+     // }
 }
 
 .menu-text {
@@ -36,7 +24,6 @@ p.site-title {
           padding: 0;
           .top-bar-left,
           .top-bar-right {
-               @include flex-grid-column(12);
 
                ul.menu {
                     padding: 10px 0;
@@ -47,7 +34,7 @@ p.site-title {
 
 
 /* Top Bar is Desktop Menu View */
-@include breakpoint(medium up) {
+@include breakpoint(medium) {
      .top-bar {
           @include flex-grid-row($width: 100%, $gutter: 0);
           @include flex-align($y:middle);
@@ -65,4 +52,26 @@ p.site-title {
           }
 
      }
+}
+
+.title-bar-title {
+     float: left;
+     margin-left: 5%;
+}
+
+.menu-icon {
+     margin: 5px 8px;
+     width: 26px;
+}
+.menu-toggle {
+     // border: 1px solid;
+     // border-radius: 3px;
+     float: right;
+     font-weight: 700;
+     padding: 27px;
+     text-transform: uppercase;
+}
+
+.top-bar-left .menu-text {
+     @include show-for(medium);
 }

@@ -28,6 +28,7 @@ var gulp = require('gulp'),
                   // Add pages that are important here after running
                   // production make sure to check pages manually for proper display
                   'http://foundation.dev',
+                  'http://foundation.dev/blog',
                   'http://foundation.dev/sample-page'
              ],
              ignore: [
