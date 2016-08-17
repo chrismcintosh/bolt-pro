@@ -17,7 +17,7 @@
 	vertical-align: top;
 	width: 100%;
 
-	@include breakpoint(tablet) {
+	@include breakpoint(medium) {
 
 		.gallery-columns-0 &,
 		.gallery-columns-1 &,

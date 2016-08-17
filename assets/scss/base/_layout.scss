@@ -5,14 +5,14 @@
 
 .content {
      @include grid-column(12);
-     @include breakpoint(tablet) {
+     @include breakpoint(medium) {
           @include grid-column(8);
      }
 }
 
 .sidebar {
      @include grid-column(12);
-     @include breakpoint(tablet) {
+     @include breakpoint(medium) {
           @include grid-column(4);
      }
 }

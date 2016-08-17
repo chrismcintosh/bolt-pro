@@ -19,6 +19,7 @@ define( 'CHILD_THEME_URL', 'http://www.sbydigital.com/' );
 define( 'CHILD_THEME_VERSION', '0.0.1' );
 
 include get_stylesheet_directory() . '/lib/enqueue-scripts.php';
+include get_stylesheet_directory() . '/lib/suggested-plugins.php';
 include get_stylesheet_directory() . '/lib/components/index.php';
 
 
