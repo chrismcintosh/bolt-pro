@@ -5,10 +5,24 @@
 .footer-widgets {
      background-color: $light-gray;
      margin-bottom: 20px;
-     padding: 60px;
+     padding: 60px 0;
 
-     .wrap {
-          @include grid-row();
+     li {
+          list-style-type: none;
+          margin-bottom: 6px;
+          word-wrap: break-word;
+     }
+
+     .entry {
+          background: transparent;
+     }
+
+     .search-form input[type="search"] {
+          width: 100%;
+     }
+
+     .widget {
+          margin-bottom: 24px;
      }
 
      .widget-area {
@@ -20,4 +34,23 @@
           }
      }
 
+     .wrap {
+          @include grid-row();
+     }
+
+
+
+}
+
+/*
+Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+	@include grid-column(100%);
+
+	@include breakpoint(medium) {
+		@include grid-column(30%);
+	}
 }
