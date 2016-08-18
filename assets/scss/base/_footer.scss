@@ -1,3 +1,23 @@
 .site-footer {
      text-align: center;
 }
+
+.footer-widgets {
+     background-color: $light-gray;
+     margin-bottom: 20px;
+     padding: 60px;
+
+     .wrap {
+          @include grid-row();
+     }
+
+     .widget-area {
+          @include grid-column(12);
+
+          @include breakpoint(medium) {
+               @include grid-column(4,0);
+               text-align: center;
+          }
+     }
+
+}

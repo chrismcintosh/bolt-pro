@@ -3,6 +3,17 @@
      padding: 80px 2%;
 }
 
+.full-width-content {
+     .content {
+          @include grid-column(12);
+
+          @include breakpoint(medium) {
+               @include grid-column(8);
+               @include grid-col-pos(2);
+          }
+     }
+}
+
 .content {
      @include grid-column(12);
      @include breakpoint(medium) {
