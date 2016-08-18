@@ -14,8 +14,12 @@
      text-align: center;
 }
 
-
-
+@include breakpoint(medium) {
+     .site-header .cta a {
+          @include button();
+          margin: 0;
+     }
+}
 
 /* Top Bar is Desktop Menu View */
 

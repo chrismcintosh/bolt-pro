@@ -14,15 +14,16 @@
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/* Import Bourbon */
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
 /* Import Foundation */
 @import 'vendor/foundation-settings';
 @import 'vendor/foundation';
 
-/* Import Bourbon */
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
-
 /* Import Base */
 @import 'base/accessibility';
+@import 'base/default';
 @import 'base/layout';
 @import 'base/header';
 @import 'base/footer';
