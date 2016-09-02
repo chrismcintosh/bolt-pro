@@ -36,19 +36,6 @@
 
           float: left;
           padding-top: 10px;
-
-          @include breakpoint(320px) {
-               padding-top: 5px;
-          }
-          @include breakpoint(375px) {
-               padding-top: 10px;
-          }
-          @include breakpoint(414px) {
-               padding-top: 5px;
-          }
-          @include breakpoint(440px) {
-               padding-top: 0px;
-          }
      }
      .menu-toggle {
           @include grid-column(5, 0);
