@@ -14,4 +14,5 @@ gulp.task('watch', function() {
   .on('change', browsersync.reload, function(event) {
    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
+  gulp.watch( '**/*.php' ).on( 'change', browsersync.reload );
 })
