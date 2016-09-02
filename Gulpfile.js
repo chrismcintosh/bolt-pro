@@ -6,8 +6,9 @@ var config = require('./assets/gulp/config'); // Relative to this file
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var beep = require('beepbeep');
+var browsersync = require('browser-sync').create(); // create a browser sync instance.
 
 //****************************
 //        Default Task
 //****************************
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'watch', 'browsersync']);

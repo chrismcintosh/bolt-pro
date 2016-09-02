@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     $ = require('gulp-load-plugins')(),
     mqpacker = require('css-mqpacker'),
-    beep = require('beepbeep');
+    beep = require('beepbeep'),
+    browsersync = require('browser-sync'); // create a browser sync instance.
 
 
     var sassOptions = {
@@ -34,5 +35,6 @@ var gulp = require('gulp'),
                }),
         ]))
         .pipe($.sourcemaps.write())
-        .pipe(gulp.dest(config.paths.project));
+        .pipe(gulp.dest(config.paths.project))
+        .pipe(browsersync.reload({stream: true}));
     });
