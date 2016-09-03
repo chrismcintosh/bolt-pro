@@ -1,5 +1,7 @@
 # genesis-foundation
 
+*Create new Genesis Framework themes at a lightning fast pace and finish with incredibly small files*
+
 Welcome to the Genesis / Foundation starter theme. This is a developer theme meant to be a launchpad for developing with the Genesis Framework. It utilizes the Foundation Framework for front-end development.
 
 I have tried to leave the Genesis Framework as untouched as possible.
