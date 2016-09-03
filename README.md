@@ -1,6 +1,6 @@
 # genesis-foundation
 
-![Bolt Pro Graphic](screenshot.png)
+![Bolt Pro Graphic](images/readme-graphic.png)
 
 *Create new Genesis Framework themes at a lightning fast pace and finish with incredibly small files*
 
