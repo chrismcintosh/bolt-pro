@@ -1,22 +1,22 @@
 <?php
 /**
- * Genesis Sample.
+ * Bolt Pro.
  *
- * This file adds functions to the Genesis Sample Theme.
+ * This file adds functions to the Bolt Pro Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Bolt Pro
+ * @author  Chris Mcintosh
  * @license GPL-2.0+
- * @link    http://www.studiopress.com/
+ * @link    http://www.mcintosh.io
  */
 
 //* Start the engine
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Genesis Foundation' );
-define( 'CHILD_THEME_URL', 'http://www.sbydigital.com/' );
-define( 'CHILD_THEME_VERSION', '0.0.1' );
+define( 'CHILD_THEME_NAME', 'Bolt Pro' );
+define( 'CHILD_THEME_URL', 'http://www.mcintosh.io' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 include get_stylesheet_directory() . '/lib/enqueue-scripts.php';
 include get_stylesheet_directory() . '/lib/suggested-plugins.php';

@@ -1,14 +1,14 @@
 <?php
 /**
- * Front page for the Utility Pro theme
+ * Front page for the Bolt Pro theme
  *
- * @package Utility_Pro
- * @author  Carrie Dils
+ * @package Bolt_Pro
+ * @author  Chris Mcintosh
  * @license GPL-2.0+
  */
 
-add_action( 'genesis_meta', 'foundation_homepage_setup' );
-function foundation_homepage_setup() {
+add_action( 'genesis_meta', 'bolt_pro_homepage_setup' );
+function bolt_pro_homepage_setup() {
 
 	// Full width layout.
 	add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );

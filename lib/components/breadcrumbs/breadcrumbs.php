@@ -1,8 +1,8 @@
 <?php
 
 //* Modify breadcrumb arguments.
-add_filter( 'genesis_breadcrumb_args', 'sp_breadcrumb_args' );
-function sp_breadcrumb_args( $args ) {
+add_filter( 'genesis_breadcrumb_args', 'bolt_pro_breadcrumbs_args' );
+function bolt_pro_breadcrumbs_args( $args ) {
 	$args['home'] = 'Home';
 	$args['sep'] = ' / ';
 	$args['list_sep'] = ', '; // Genesis 1.5 and later

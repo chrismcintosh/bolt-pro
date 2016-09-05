@@ -1,7 +1,7 @@
 <?php
 
-add_action('genesis_entry_content', 'foundation_featured_image', 1);
-function foundation_featured_image() {
+add_action('genesis_entry_content', 'bolt_pro_foundation_featured_image', 1);
+function bolt_pro_foundation_featured_image() {
 
 	/**
 	 * Add featured image above single posts.

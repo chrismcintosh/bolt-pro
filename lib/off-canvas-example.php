@@ -1,7 +1,7 @@
 <?php
 
-add_action('genesis_after_header', 'sby_off_canvas');
-function sby_off_canvas() {
+add_action('genesis_after_header', 'bolt_pro_off_canvas');
+function bolt_pro_off_canvas() {
 	?>
 
      <!-- Off Canvas Trigger -->

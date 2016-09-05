@@ -21,7 +21,7 @@
  */
 require_once dirname( __FILE__ ) . '/tgm/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'sby_starter_register_required_plugins' );
+add_action( 'tgmpa_register', 'bolt_pro_register_required_plugins' );
 /**
  * Register the required plugins for this theme.
  *
@@ -31,7 +31,7 @@ add_action( 'tgmpa_register', 'sby_starter_register_required_plugins' );
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function sby_starter_register_required_plugins() {
+function bolt_pro_register_required_plugins() {
 
 	/**
 	 * Array of plugin arrays. Required keys are name and slug.

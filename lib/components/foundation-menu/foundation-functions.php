@@ -17,8 +17,8 @@ remove_theme_support( 'genesis-menus' );
 /*********************
 ADD FOUNDATION FEATURES TO WORDPRESS
 *********************/
-add_action('genesis_header', 'foundation_do_primary_nav');
-function foundation_do_primary_nav() { ?>
+add_action('genesis_header', 'bolt_pro_do_primary_nav');
+function bolt_pro_do_primary_nav() { ?>
 
      <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
           <div class="title-bar-title"><?php do_action('foundation_site_title'); ?></div>
