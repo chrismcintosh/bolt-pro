@@ -2,7 +2,7 @@
 
 *Create new Genesis Framework child themes at a lightning fast pace and finish with incredibly small files*
 
-Welcome to the Genesis / Foundation starter theme. This is a developer theme meant to be a launchpad for developing with the Genesis Framework. It utilizes the Foundation Framework for front-end development.
+Welcome to the Bolt Pro starter theme for the Genesis Framework. This is a developer theme meant to be a blank canvas for developing with the Genesis Framework. It utilizes the Foundation Framework for front-end development.
 
 I have tried to leave the Genesis Framework as untouched as possible.
 
@@ -19,3 +19,6 @@ To get started developing make sure you have npm installed and then run `npm ins
 I'm aiming to provide all the tools that Foundation has developed but help you keep the filesizes very small. There are Gulptasks written to strip out unused code, and minimize the final files.
 
 If you enter all the important pages into the production gulp task located in /assets/gulp/tasks/production.js the production task will compile all sass files rip out any css that isnt used on the pages listed and then minify the output file.
+
+##Override Foundation Defaults
+Set Foundation settings in assets/scss/vendor/foundation-settings.scss. If you would like to not include foundation components comment them out in the foundation.scss in the same folder.
