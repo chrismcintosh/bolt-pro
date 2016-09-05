@@ -15,6 +15,9 @@ I have tried to leave the Genesis Framework as untouched as possible.
 ##Getting Started with development
 To get started developing make sure you have npm installed and then run `npm install` after the install runs go into assets/gulp/tasks/browsersync.js and put your localhost address in then simply run `gulp` browsersync will take over from there!
 
+##Browsersync
+Allows you view your site across your local network on actual devices.
+
 ##Production Gulp Task
 I'm aiming to provide all the tools that Foundation has developed but help you keep the filesizes very small. There are Gulptasks written to strip out unused code, and minimize the final files.
 

@@ -65,7 +65,7 @@
 
      @include breakpoint(medium) {
           .top-bar .wrap {
-               @include flex-grid-row($width: 1024px, $gutter: 0);
+               @include flex-grid-row($width: 1140px, $gutter: 0);
                @include flex-align($y:middle);
                justify-content: space-between;
                padding: 10px 0;
