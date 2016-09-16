@@ -25,3 +25,8 @@ If you enter all the important pages into the production gulp task located in /a
 
 ##Override Foundation Defaults
 Set Foundation settings in assets/scss/vendor/foundation-settings.scss. If you would like to not include foundation components comment them out in the foundation.scss in the same folder.
+
+#Tutorial
+If you would like to get started using this theme and would like to see how it works check out this poorly narrated tutorial on getting started with the theme.
+
+[How to Get Started With Bolt Pro](https://www.youtube.com/playlist?list=PLZgiSUbmSPBHtfSKlP1SqCLaVjkRiaPaz)
