@@ -14,6 +14,13 @@ remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
  */
 // Remove Genesis Nav Support
 remove_theme_support( 'genesis-menus' );
+
+// Register Foundation Navigation
+add_action( 'init', 'register_foundation_menu' );
+function register_foundation_menu() {
+  register_nav_menu('primary-navigation',__( 'Primary Navigation' ));
+}
+
 /*********************
 ADD FOUNDATION FEATURES TO WORDPRESS
 *********************/
