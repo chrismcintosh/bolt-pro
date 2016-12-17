@@ -1,0 +1,24 @@
+{
+  "name": "bolt-pro",
+  "homepage": "https://github.com/chrismcintosh/bolt-pro",
+  "authors": [
+    "chrismcintosh <chris@mcintosh.io>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "^4.2.7",
+    "foundation-sites": "~6.3.0",
+    "motion-ui": "~1.2.2"
+  }
+}

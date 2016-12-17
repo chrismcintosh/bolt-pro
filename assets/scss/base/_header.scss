@@ -29,7 +29,7 @@
           width: 100%;
      }
      .title-bar {
-          @include grid-row($behavior: nest, $width: 100%, $gutter: 0);
+          @include grid-row($behavior: nest, $size: 100%, $gutters: 0);
      }
      .title-bar-title {
           @include grid-column(7,0);
@@ -65,7 +65,7 @@
 
      @include breakpoint(medium) {
           .top-bar .wrap {
-               @include flex-grid-row($width: 1140px, $gutter: 0);
+               @include flex-grid-row($size: 1140px, $gutters: 0);
                @include flex-align($y:middle);
                justify-content: space-between;
                padding: 10px 0;
@@ -85,7 +85,7 @@
      }
 
      .top-bar {
-          @include flex-grid-row($width: 100%);
+          @include flex-grid-row($size: 100%);
           padding: 0;
           .top-bar-left,
           .top-bar-right {

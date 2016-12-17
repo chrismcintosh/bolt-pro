@@ -11,4 +11,4 @@ var browsersync = require('browser-sync').create(); // create a browser sync ins
 //****************************
 //        Default Task
 //****************************
-gulp.task('default', ['sass', 'watch', 'browsersync']);
+gulp.task('default', ['sass', 'javascript', 'watch', 'browsersync']);

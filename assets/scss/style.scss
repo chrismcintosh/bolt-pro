@@ -27,10 +27,10 @@
 @import 'base/layout';
 @import 'base/header';
 @import 'base/footer';
-
-/* Import Components */
+//
+// /* Import Components */
 @import 'components/article';
 @import 'components/gallery';
 @import 'components/featured-image';
-
+//
 @import 'views/home';
