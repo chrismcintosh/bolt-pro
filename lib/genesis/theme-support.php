@@ -24,3 +24,10 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 
 //* Set full-width content as the default layout
 genesis_set_default_layout( 'full-width-content' );
+
+//* Add support for structural wraps
+add_theme_support( 'genesis-structural-wraps', array(
+	'site-inner',
+	'footer-widgets',
+	'footer'
+) );

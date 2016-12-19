@@ -5,10 +5,10 @@ function bolt_pro_off_canvas() {
 	?>
 
      <!-- Off Canvas Trigger -->
-	<button type="button" class="button primary trans-button" data-toggle="offCanvasCart">Open Menu</button>
+	<button type="button" class="button primary trans-button" data-toggle="off-canvas-menu">Open Menu</button>
 
      <!-- Off Canvas Content -->
-     <div class="off-canvas position-right" id="offCanvasCart" data-off-canvas data-position="right">
+     <div class="off-canvas position-right" id="off-canvas-menu" data-off-canvas>
 
 	        <!-- Close button -->
 	        <button class="close-button" aria-label="Close menu" type="button" data-close>
@@ -27,8 +27,5 @@ function bolt_pro_off_canvas() {
 
 	      </div>
 
-	      <div class="off-canvas-content" data-off-canvas-content>
-	        <!-- Page content -->
-	      </div>
 	<?php
 }

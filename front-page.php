@@ -19,6 +19,4 @@ function bolt_pro_homepage_setup() {
 }
 
 
-
-
 genesis();

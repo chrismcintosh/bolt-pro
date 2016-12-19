@@ -39,20 +39,11 @@ function bolt_pro_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// Include Genesis Accesible.
-		array(
-			'name'     				=> 'Genesis Accessible', // The plugin name.
-			'slug'     				=> 'genesis-accessible', // The plugin slug (typically the folder name).
-			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required.
-               'force_activation'            => true,
-		),
-
 		// Include WP Accessibility.
 		array(
 			'name'     				=> 'WP Accessibility', // The plugin name.
 			'slug'     				=> 'wp-accessibility', // The plugin slug (typically the folder name).
-			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required.
-               'force_activation'            => true,
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
 		),
 
           // Include Ninja Forms

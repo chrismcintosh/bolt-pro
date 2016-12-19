@@ -17,6 +17,9 @@
 /* Import Bourbon */
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
+@import 'vendor/slick';
+@import 'vendor/slick-theme';
+
 /* Import Foundation */
 @import 'vendor/foundation-settings';
 @import 'vendor/foundation';
@@ -27,6 +30,8 @@
 @import 'base/layout';
 @import 'base/header';
 @import 'base/footer';
+
+
 //
 // /* Import Components */
 @import 'components/article';

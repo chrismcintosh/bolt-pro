@@ -42,7 +42,9 @@ module.exports = {
            './assets/bower_components/foundation-sites/js/foundation.tooltip.js',
            './assets/bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js',
            './assets/js/foundation-init.js',
+           './assets/bower_components/slick-carousel/slick/slick.js',
            // Custom Scripts
+           './assets/js/slick.js'
       ],
       script: './assets/js/'
     }

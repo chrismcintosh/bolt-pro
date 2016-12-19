@@ -18,27 +18,18 @@ define( 'CHILD_THEME_NAME', 'Bolt Pro' );
 define( 'CHILD_THEME_URL', 'http://www.mcintosh.io' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
-include get_stylesheet_directory() . '/lib/enqueue-scripts.php';
-include get_stylesheet_directory() . '/lib/suggested-plugins.php';
-include get_stylesheet_directory() . '/lib/components/index.php';
+//* Include Default Plugins Scripts and Styles
+	include get_stylesheet_directory() . '/lib/enqueue-scripts.php';
+	include get_stylesheet_directory() . '/lib/suggested-plugins.php';
 
+//* Include Genesis Specific Modifications
+	include get_stylesheet_directory() . '/lib/genesis/theme-support.php';
+	include get_stylesheet_directory() . '/lib/genesis/inline-title-logo.php';
+	include get_stylesheet_directory() . '/lib/genesis/breadcrumbs.php';
+	include get_stylesheet_directory() . '/lib/genesis/blog-featured-image.php';
+	include get_stylesheet_directory() . '/lib/genesis/move-pagination.php';
 
-// include get_stylesheet_directory() . '/lib/header-navigation.php';
-
-include get_stylesheet_directory() . '/lib/theme-support.php';
-include get_stylesheet_directory() . '/lib/inline-title-logo.php';
-
-
-
-//* Project Specific Includes
-	// include get_stylesheet_directory() . '/lib/off-canvas-example.php';
-
-//* Add support for structural wraps
-add_theme_support( 'genesis-structural-wraps', array(
-	'site-inner',
-	'footer-widgets',
-	'footer'
-) );
-
-remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
-add_action('genesis_after_content_sidebar_wrap', 'genesis_posts_nav');
+//* Include Foundation Specific Modifcations
+	include get_stylesheet_directory() . '/lib/foundation/foundation-menu/index.php';
+	include get_stylesheet_directory() . '/lib/foundation/off-canvas-wrapper.php';
+	// include get_stylesheet_directory() . '/lib/foundation/off-canvas-example.php';

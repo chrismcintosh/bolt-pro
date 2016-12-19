@@ -7,10 +7,11 @@ Welcome to the Bolt Pro starter theme for the Genesis Framework. This is a devel
 I have tried to leave the Genesis Framework as untouched as possible.
 
 #Features
-* Foundation 6 (Grid, Menu, Breadcrumbs, Off-canvas)
+* Foundation 6.3 (Grid, Menu, Breadcrumbs, Off-canvas)
 * Suggested Plugins (Accessibilty Plugins, etc.)
 * Browsersync
 * Compile Sass & Minify
+* Compile JS & Minify
 
 ##Getting Started with development
 To get started developing make sure you have npm installed and then run `npm install` after the install runs go into assets/gulp/tasks/browsersync.js and put your localhost address in then simply run `gulp` browsersync will take over from there!
@@ -25,6 +26,10 @@ If you enter all the important pages into the production gulp task located in /a
 
 ##Override Foundation Defaults
 Set Foundation settings in assets/scss/vendor/foundation-settings.scss. If you would like to not include foundation components comment them out in the foundation.scss in the same folder.
+
+#Gotchas
+* When using an external jQuery library you have to call .foundation() on the end of the jQuery statement. I've include slick.js and made the theme slick ready as an example you can find it in '/assets/js/slick.js'
+* To add a new JS file to the compiler go to '/assets/gulp/config.js' find the javascript foundation array and add the path to the JS file you wish to have included in the compile
 
 #Tutorial
 If you would like to get started using this theme and would like to see how it works check out this poorly narrated tutorial on getting started with the theme.
