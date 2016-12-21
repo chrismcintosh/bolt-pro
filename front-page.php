@@ -16,6 +16,7 @@ function bolt_pro_homepage_setup() {
 	// Remove standard loop and replace with loop showing Posts, not Page content.
 	remove_action( 'genesis_loop', 'genesis_do_loop' );
 
+
 }
 
 
