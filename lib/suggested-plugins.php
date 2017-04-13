@@ -46,40 +46,40 @@ function bolt_pro_register_required_plugins() {
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
 		),
 
-          // Include Ninja Forms
-          array(
-               'name'     				=> 'Ninja Forms', // The plugin name.
-               'slug'     				=> 'ninja-forms', // The plugin slug (typically the folder name).
-               'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
-          ),
-
-          // Include Yoast SEO
-          array(
-               'name'     				=> 'Yoast SEO', // The plugin name.
-               'slug'     				=> 'wordpress-seo', // The plugin slug (typically the folder name).
-               'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
-          ),
-
-          // Include Wordpress Spamshield
-          array(
-               'name'     				=> 'WP Spamshield', // The plugin name.
-               'slug'     				=> 'wp-spamshield', // The plugin slug (typically the folder name).
-               'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
-          ),
-
-          // Include Google Analytics
-          array(
-               'name'     				=> 'Google Analytics', // The plugin name.
-               'slug'     				=> 'google-analytics-for-wordpress', // The plugin slug (typically the folder name).
-               'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
-          ),
-
-          // Include WP Smush
-          array(
-               'name'     				=> 'WP Smush', // The plugin name.
-               'slug'     				=> 'wp-smushit', // The plugin slug (typically the folder name).
-               'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
-          ),
+          // // Include Ninja Forms
+          // array(
+          //      'name'     				=> 'Ninja Forms', // The plugin name.
+          //      'slug'     				=> 'ninja-forms', // The plugin slug (typically the folder name).
+          //      'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
+          // ),
+		//
+          // // Include Yoast SEO
+          // array(
+          //      'name'     				=> 'Yoast SEO', // The plugin name.
+          //      'slug'     				=> 'wordpress-seo', // The plugin slug (typically the folder name).
+          //      'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
+          // ),
+		//
+          // // Include Wordpress Spamshield
+          // array(
+          //      'name'     				=> 'WP Spamshield', // The plugin name.
+          //      'slug'     				=> 'wp-spamshield', // The plugin slug (typically the folder name).
+          //      'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
+          // ),
+		//
+          // // Include Google Analytics
+          // array(
+          //      'name'     				=> 'Google Analytics', // The plugin name.
+          //      'slug'     				=> 'google-analytics-for-wordpress', // The plugin slug (typically the folder name).
+          //      'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
+          // ),
+		//
+          // // Include WP Smush
+          // array(
+          //      'name'     				=> 'WP Smush', // The plugin name.
+          //      'slug'     				=> 'wp-smushit', // The plugin slug (typically the folder name).
+          //      'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
+          // ),
 
 	);
 

@@ -1,0 +1,63 @@
+# Your project's server will run on localhost:xxxx at this port
+PORT: 8000
+PROXY: "bolt.dev"
+
+# Autoprefixer will make sure your CSS works with these browsers
+COMPATIBILITY:
+  - "last 2 versions"
+  - "ie >= 9"
+  - "ios >= 7"
+
+# UnCSS will use these settings
+UNCSS_OPTIONS:
+  html:
+    - "**/*.php"
+  ignore:
+    - !!js/regexp .foundation-mq
+    - !!js/regexp ^\.is-.*
+
+# Gulp will reference these paths when it copies files
+PATHS:
+  # Path to dist folder
+  dist: "./"
+  # Paths to static assets that aren't images, CSS, or JavaScript
+  assets:
+    - "assets/**/*"
+    - "!assets/{img,js,scss}/**/*"
+  # Paths to Sass libraries, which can then be loaded with @import
+  sass:
+    - "assets/bower_components/foundation-sites/scss"
+    - "assets/bower_components/motion-ui/src"
+  # Paths to JavaScript libraries, which are combined into one file
+  javascript:
+    # Libraries required by Foundation
+    - "assets/bower_components/jquery/dist/jquery.js"
+    - "assets/bower_components/what-input/dist/what-input.js"
+    # Core Foundation files
+    - "assets/bower_components/foundation-sites/js/foundation.core.js"
+    - "assets/bower_components/foundation-sites/js/foundation.util.*.js"
+    # Individual Foundation components
+    # If you aren't using a component, just remove it from the list
+    - "assets/bower_components/foundation-sites/js/foundation.abide.js"
+    - "assets/bower_components/foundation-sites/js/foundation.accordion.js"
+    - "assets/bower_components/foundation-sites/js/foundation.accordionMenu.js"
+    - "assets/bower_components/foundation-sites/js/foundation.drilldown.js"
+    - "assets/bower_components/foundation-sites/js/foundation.dropdown.js"
+    - "assets/bower_components/foundation-sites/js/foundation.dropdownMenu.js"
+    - "assets/bower_components/foundation-sites/js/foundation.equalizer.js"
+    - "assets/bower_components/foundation-sites/js/foundation.interchange.js"
+    - "assets/bower_components/foundation-sites/js/foundation.magellan.js"
+    - "assets/bower_components/foundation-sites/js/foundation.offcanvas.js"
+    - "assets/bower_components/foundation-sites/js/foundation.orbit.js"
+    - "assets/bower_components/foundation-sites/js/foundation.responsiveMenu.js"
+    - "assets/bower_components/foundation-sites/js/foundation.responsiveToggle.js"
+    - "assets/bower_components/foundation-sites/js/foundation.reveal.js"
+    - "assets/bower_components/foundation-sites/js/foundation.slider.js"
+    - "assets/bower_components/foundation-sites/js/foundation.sticky.js"
+    - "assets/bower_components/foundation-sites/js/foundation.tabs.js"
+    - "assets/bower_components/foundation-sites/js/foundation.toggler.js"
+    - "assets/bower_components/foundation-sites/js/foundation.tooltip.js"
+    - "assets/bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
+    # Paths to your own project code are here
+    - "assets/js/!(scripts).js"
+    - "assets/js/scripts.js"
