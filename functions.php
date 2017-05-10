@@ -33,3 +33,6 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 	include get_stylesheet_directory() . '/lib/foundation/foundation-menu/index.php';
 	include get_stylesheet_directory() . '/lib/foundation/off-canvas-wrapper.php';
 	// include get_stylesheet_directory() . '/lib/foundation/off-canvas-example.php';
+
+//* Include Woocommerce Modifications
+	include get_stylesheet_directory() . '/lib/woocommerce/index.php';

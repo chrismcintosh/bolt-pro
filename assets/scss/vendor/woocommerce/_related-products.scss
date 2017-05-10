@@ -1,0 +1,39 @@
+.related.products {
+     margin-top: 20px;
+
+     ul.products {
+          @include flex-grid-row();
+     }
+
+     .product {
+          @include flex-grid-column(6);
+
+          @include breakpoint(large) {
+               @include flex-grid-column(3);
+          }
+
+
+          .add_to_cart_button {
+               display: block;
+          }
+
+          .woocommerce-loop-product__title {
+                    font-size: 1.2rem;
+                    text-align: center;
+          }
+
+          span.price {
+               display: block;
+               text-align: center;
+          }
+
+          .inner {
+               position: relative;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: space-between;
+          }
+     }
+
+}

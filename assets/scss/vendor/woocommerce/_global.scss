@@ -1,0 +1,34 @@
+.products {
+     @include flex-grid-row();
+     list-style-type: none;
+     clear: both;
+}
+
+.wc-tabs-wrapper {
+     @include clearfix;
+
+     .accordion,
+     .tabs {
+          margin-top: 20px;
+     }
+}
+
+.product .woocommerce-LoopProduct-link {
+     height: 100%;
+     position: relative;
+     overflow: hidden;
+}
+
+.shop_table {
+     text-align: left;
+}
+
+.summary {
+     .woocommerce-review-link {
+          display: block;
+          text-align: center;
+     }
+     .price {
+          text-align: center;
+     }
+}

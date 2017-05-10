@@ -17,7 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "^4.2.7",
     "foundation-sites": "~6.3.0",
     "motion-ui": "~1.2.2",
     "slick-carousel": "^1.6.0"

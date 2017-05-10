@@ -1,0 +1,41 @@
+/***********************************
+************************************
+            Sticker
+************************************/
+
+.absolute-sticker {
+    position: absolute;
+    padding: 32px 0 8px;
+    width: 140px;
+    text-align: center;
+    border-radius: 0;
+    font-weight: 700;
+    top: -15px;
+    left: -50px;
+    z-index: 3;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+.post-type-archive-product,
+.related.products {
+
+     .product span.onsale,
+     .product span.soldout {
+          @extend .absolute-sticker;
+     }
+
+     .product span.onsale {
+         background: rgba($primary, 0.7);
+     }
+
+     .product span.soldout {
+         background: rgba($secondary, 0.7);
+     }
+
+}

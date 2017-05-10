@@ -14,8 +14,9 @@
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-/* Import Bourbon */
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+/* Color Variables */
+$primary: #1779ba;
+$secondary: #767676;
 
 @import 'vendor/slick';
 @import 'vendor/slick-theme';
@@ -31,11 +32,19 @@
 @import 'base/header';
 @import 'base/footer';
 
+/*Import Woo Commerce */
+@import 'vendor/woocommerce/archive-product';
+@import 'vendor/woocommerce/global';
+@import 'vendor/woocommerce/related-products';
+@import 'vendor/woocommerce/single-product';
+@import 'vendor/woocommerce/stars';
+@import 'vendor/woocommerce/sticker';
 
-//
-// /* Import Components */
+
+/* Import Components */
 @import 'components/article';
 @import 'components/gallery';
 @import 'components/featured-image';
-//
+
+/* Import Views */
 @import 'views/home';

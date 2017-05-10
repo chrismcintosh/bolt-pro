@@ -1,0 +1,131 @@
+/***********************************
+************************************
+    	Star Ratings
+************************************/
+.star-rating {
+	overflow: hidden;
+	position: relative;
+	height: 1em;
+	line-height: 1em;
+	font-size: 1em;
+	width: 4.7em;
+	font-family: "fontawesome";
+	margin: 0 auto;
+
+	&:before {
+		content: "\f006\f006\f006\f006\f006";
+		float: left;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+
+	span {
+		overflow: hidden;
+		float: left;
+		top: 0;
+		left: 0;
+		position: absolute;
+		padding-top: 1.5em;
+
+		&:before {
+			content: "\f005\f005\f005\f005\f005";
+			top: 0;
+			position: absolute;
+			left: 0;
+		}
+
+	}
+
+}
+
+/* Sidebar / footer stars */
+.widget .star-rating {
+	font-size: .8em;
+}
+
+.comment-form-rating {
+	clear: both;
+}
+
+p.stars {
+	position: relative;
+	line-height: 1em;
+	font-size: 1em;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	a {
+		width: 19%;
+		display: block;
+		position: relative;
+		float: left;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: .5em .5em .5em .75em;
+		background: rgba(0, 0, 0, 0.025);
+		margin-right: 1%;
+		border-radius: 4px;
+		font-weight: bold;
+
+		&:hover,
+		.active {
+			background: rgba(0, 0, 0, 0.075);
+		}
+
+		.star-1,
+		.star-2,
+		.star-3,
+		.star-4,
+		.star-5 {
+
+			&:after {
+			font-family: "FontAwesome";
+			content: "\f005";
+			position: absolute;
+			top: .85em;
+			width: 5.3em;
+			right: 1em;
+			font-size: .5em;
+			border-radius: 1em;
+			color: #999;
+			text-align: right;
+			font-weight: normal;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+
+		}
+
+		.star-1:after {
+			content: "\f005";
+		}
+
+		.star-2:after {
+			content: "\f005\f005";
+		}
+
+		.star-3:after {
+			content: "\f005\f005\f005";
+		}
+
+		.star-4:after {
+			content: "\f005\f005\f005\f005";
+		}
+
+		.star-5:after {
+			content: "\f005\f005\f005\f005\f005";
+		}
+
+	/* End a */
+	}
+
+
+}

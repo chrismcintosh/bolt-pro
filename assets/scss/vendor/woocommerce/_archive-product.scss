@@ -1,0 +1,62 @@
+/* Fix for sticker floating off product */
+.archive .products .product .inner {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.post-type-archive-product {
+
+     .product {
+               @include flex-grid-column(6, 0);
+
+               @include breakpoint(medium) {
+                    @include flex-grid-column(4, 0);
+               }
+
+               @include breakpoint(large) {
+                    @include flex-grid-column(3, 0);
+               }
+
+     }
+     .page-title {
+          @include flex-grid-column(12);
+     }
+
+     .product .inner {
+          margin: 10px;
+     }
+
+     span.price {
+          clear:both;
+          display: block;
+          text-align: center;
+     }
+
+     .woocommerce-loop-product__title {
+          font-size: 1.2rem;
+          text-align: center;
+     }
+
+     @include breakpoint(medium) {
+          .woocommerce-result-count {
+               float: left;
+          }
+
+          .woocommerce-ordering {
+               float: right;
+          }
+     }
+
+}
+
+.post-type-archive-product.full-width-content {
+          .content {
+               @include grid-column(12);
+               @include breakpoint(medium) {
+                    @include grid-column(12);
+               }
+          }
+}
