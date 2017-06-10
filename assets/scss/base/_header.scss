@@ -64,3 +64,14 @@
           @include flex-grid-column(4);
      }
 }
+
+.is-accordion-submenu {
+     margin-left: 8%;
+}
+
+.top-bar,
+.title-bar {
+     .is-accordion-submenu-parent > a::after {
+          border-color: #fff transparent transparent;
+     }
+}

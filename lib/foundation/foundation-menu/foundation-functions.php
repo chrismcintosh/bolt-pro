@@ -47,13 +47,13 @@ function bolt_pro_do_primary_nav() { ?>
                     wp_nav_menu(array(
                          'container'	=> false,
                          'menu' => 'Primary Navigation',
-                         'menu_class'	=> 'dropdown menu',
+                         'menu_class'	=> 'menu dropdown vertical medium-horizontal',
                          'theme_location' => 'primary-navigation',
                          'before' => '',
                          'after' => '',
                          'link_before' => '',
                          'link_after' => '',
-                         'items_wrap' => '<ul id="%1$s" class="%2$s menu" data-responsive-menu="drilldown medium-dropdown">%3$s</ul>',
+                         'items_wrap' => '<ul id="%1$s" class="%2$s menu" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
                          'walker'  => new Foundation_Walker()
                     ));
                     ?>
