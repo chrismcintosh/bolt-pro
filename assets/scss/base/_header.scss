@@ -43,7 +43,7 @@
      }
 }
 
-.title-bar {
+.title-bar__wrap {
      @include flex-grid-row();
      align-items: center;
      justify-content: space-between;
@@ -53,7 +53,7 @@
      @include flex-grid-column(7);
 
      @include breakpoint(415px) {
-          @include flex-grid-column(8);
+          @include flex-grid-column(8, 0);
      }
 }
 
@@ -61,7 +61,7 @@
      @include flex-grid-column(5);
 
      @include breakpoint(415px) {
-          @include flex-grid-column(4);
+          @include flex-grid-column(4,0);
      }
 }
 
@@ -72,6 +72,9 @@
 .top-bar,
 .title-bar {
      .is-accordion-submenu-parent > a::after {
+          border-color: $primary transparent transparent;
+     }
+     .active.is-accordion-submenu-parent > a::after {
           border-color: #fff transparent transparent;
      }
 }
