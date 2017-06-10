@@ -1,33 +1,11 @@
+.site-inner .wrap {
+     @include grid-row($size: 1024px);
+}
+
 .content-sidebar-wrap {
-     @include grid-row(null, null, 80rem, true, $grid-column-gutter);
-     padding: 80px 2%;
-}
-
-.page-template-default.full-width-content {
-     .content {
-          @include grid-column(12);
-
-          @include breakpoint(medium) {
-               @include grid-column(8);
-               @include grid-col-pos(2);
-          }
-     }
-}
-
-.content {
-     @include grid-column(12);
-     @include breakpoint(medium) {
-          @include grid-column(8);
-     }
-}
-
-.sidebar {
-     @include grid-column(12);
-     @include breakpoint(medium) {
-          @include grid-column(4);
-     }
+     margin: 30px 5%;
 }
 
 .pagination {
-     text-align: center;
+     clear: both;
 }

@@ -12,86 +12,55 @@
 .site-title {
      margin-bottom: 0;
      text-align: center;
+     font-size: 1.8rem;
+     font-weight: 300;
 }
+
+.menu-toggle {
+     @include button();
+     margin-bottom: 0;
+}
+
+.top-bar__wrap {
+     @include flex-grid-row($size: 1200px, $gutters: 0);
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+}
+
+
+.top-bar-left {
+     @include show-for(medium);
+     @include flex-grid-column(4);
+}
+
+
 
 @include breakpoint(medium) {
      .site-header .cta a {
           @include button();
-          margin: 0;
+          // margin: 0;
      }
 }
 
-/* Top Bar is Desktop Menu View */
+.title-bar {
+     @include flex-grid-row();
+     align-items: center;
+     justify-content: space-between;
+}
 
+.title-bar-left {
+     @include flex-grid-column(7);
 
-// Mobile View
-     .top-bar .wrap {
-          width: 100%;
+     @include breakpoint(415px) {
+          @include flex-grid-column(8);
      }
-     .title-bar {
-          @include grid-row($behavior: nest, $size: 100%, $gutters: 0);
+}
+
+.title-bar-right {
+     @include flex-grid-column(5);
+
+     @include breakpoint(415px) {
+          @include flex-grid-column(4);
      }
-     .title-bar-title {
-          @include grid-column(7,0);
-
-          float: left;
-          padding-top: 10px;
-     }
-     .menu-toggle {
-          @include grid-column(5, 0);
-          // border: 1px solid;
-          // border-radius: 3px;
-          float: right;
-          font-weight: 700;
-          padding: 18px;
-          text-transform: uppercase;
-
-          @include breakpoint(321px) {
-               padding: 27px;
-          }
-
-          .menu-icon {
-               margin: 5px 8px;
-               width: 26px;
-          }
-
-     }
-
-
-// Desktop View
-     .top-bar-left .menu-text {
-          @include show-for(medium);
-     }
-
-     @include breakpoint(medium) {
-          .top-bar .wrap {
-               @include flex-grid-row($size: 1140px, $gutters: 0);
-               @include flex-align($y:middle);
-               justify-content: space-between;
-               padding: 10px 0;
-
-               .top-bar-left {
-                    @include grid-column(4)
-               }
-               .top-bar-right {
-                    @include grid-column(8);
-                    float: right;
-                    ul.menu {
-                         float: right;
-                    }
-               }
-
-          }
-     }
-
-     .top-bar {
-          @include flex-grid-row($size: 100%);
-          padding: 0;
-          .top-bar-left,
-          .top-bar-right {
-
-               ul.menu {
-                    padding: 10px 0;
-               }
-          }
-     }
+}

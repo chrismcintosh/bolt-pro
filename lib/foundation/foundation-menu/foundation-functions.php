@@ -28,12 +28,15 @@ add_action('genesis_header', 'bolt_pro_do_primary_nav');
 function bolt_pro_do_primary_nav() { ?>
 
      <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-          <div class="title-bar-title"><?php do_action('foundation_site_title'); ?></div>
-          <button type="button" class="menu-toggle" data-toggle>MENU <i class="menu-icon"></i></button>
+          <div class="title-bar-left">
+               <div class="title-bar-title"><?php do_action('foundation_site_title'); ?></div>
+          </div>
+          <div class="title-bar-right">
+               <button type="button" class="menu-toggle" data-toggle>MENU <i class="menu-icon"></i></button></div>
      </div>
 
      <div class="top-bar" id="example-menu">
-          <div class="wrap">
+          <div class="top-bar__wrap">
                <div class="top-bar-left">
                     <ul class="menu">
                          <li class="menu-text"><?php do_action('foundation_site_title'); ?></li>
